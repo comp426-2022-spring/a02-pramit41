@@ -14,8 +14,12 @@
  * 
  */
 
-function coinFlip() {
-
+export function coinFlip() {
+  let num = Math.random()
+  if(num > 0.50){
+    return "heads"
+  }
+  return "tails"
 }
 
 /** Multiple coin flips
@@ -37,8 +41,17 @@ function coinFlip() {
     ]
  */
 
-function coinFlips(flips) {
-
+export function coinFlips(flips) {
+  let result = [] 
+  for(let i = 0; i < flips; i++){
+    let num = Math.random()
+    if(num > 0.50){
+      result[i] = "heads"
+    } else {
+      result[i] = "tails"
+    }
+  }
+  return result
 }
 
 /** Count multiple flips
