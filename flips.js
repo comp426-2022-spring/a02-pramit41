@@ -6,8 +6,14 @@ const args = require('minimist')(process.argv.slice(2))
 args['number']
 
 if(args.number == null || args.number == ""){
-    console.log(coinFlips(1))
-    console.log(countFlips(coinFlips(1)))
+    let result = coinFlips(1)
+    console.log(result)
+    if(result[0] == "heads"){
+        console.log({heads: 1})
+    } else {
+        console.log({tails: 1})
+    }
+
 } else { 
   console.log(coinFlips(args.number)) 
   console.log(countFlips(coinFlips(args.number)))
