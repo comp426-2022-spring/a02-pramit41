@@ -43,8 +43,6 @@ export function coinFlip() {
 
 export function coinFlips(flips) {
   let result = [] 
-  let headCount = 0
-  let tailCount = 0
   for(let i = 0; i < flips; i++){
     let num = Math.random()
     if(num > 0.50){
@@ -101,7 +99,7 @@ export function flipACoin(call) {
   } else {
     outcome = "lose"
   }
-  return {originalCall: call, flip: toss, result: outcome}
+  return {call: call, flip: toss, result: outcome}
 }
 
 
